@@ -1,0 +1,6 @@
+<div>Total rows: {{grid?.rowData?.length}}</div>
+<div>Selected rows: {{grid?.gridOptions.api.getSelectedRows().length}}</div>
+<div>
+    Enable selection: 
+    <input type="checkbox" [checked]="selectionEnabled" (change)="selectionEnabledChange($event)">
+</div>
