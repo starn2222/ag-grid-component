@@ -1,6 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { VideoGridComponent } from './video-grid.component';
+import { GridModule } from '../modules/grid/grid.module';
+import { CoreModule } from '../core';
+import { SharedModule } from '../shared';
 
 describe('VideoGridComponent', () => {
   let component: VideoGridComponent;
@@ -8,7 +11,8 @@ describe('VideoGridComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ VideoGridComponent ]
+      declarations: [ VideoGridComponent ],
+      imports: [GridModule, CoreModule, SharedModule]
     })
     .compileComponents();
   }));

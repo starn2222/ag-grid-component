@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { AgGridModule } from 'ag-grid-angular/main';
+import 'ag-grid-enterprise';
 
 import { GridSelectionHeaderComponent } from './grid-selection-header/grid-selection-header.component';
 import { GridThumbnailCellComponent } from './grid-thumbnail-cell/grid-thumbnail-cell.component';

@@ -21,8 +21,8 @@ export class GridSelectionHeaderComponent {
   }
 
   get allSelected(): boolean {
-    const totalRows = this.params.api.rowModel.getRowCount();
-    const selectedRows = this.params.api.getSelectedRows().length;
-    return totalRows === selectedRows;
+    const totalRowsCount = this.params.api.rowModel.getRowCount();
+    const selectedRowsCount = this.params.api.getSelectedRows().length;
+    return totalRowsCount === selectedRowsCount;
   }
 }
