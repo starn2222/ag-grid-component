@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { GridOptions } from 'ag-grid';
 
 import { Video, YoutubeService } from '../core';
-import { GridThumbnailCellComponent } from '../modules/grid';
+import { GridThumbnailCellComponent, GridSelectionHeaderComponent } from '../modules/grid';
 
 @Component({
   selector: 'app-video-grid',
@@ -26,9 +26,9 @@ export class VideoGridComponent implements OnInit {
     this.gridOptions.rowHeight = 50;
     this.gridOptions.rowSelection = 'multiple';
     this.gridOptions.columnDefs = [{
-      headerName: '#',
       checkboxSelection: true,
       field: 'selected',
+      headerComponentFramework: GridSelectionHeaderComponent,
     }, {
       headerName: '',
       field: 'thumbnail',
