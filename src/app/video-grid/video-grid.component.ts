@@ -44,6 +44,7 @@ export class VideoGridComponent implements OnInit {
     }, {
       headerName: 'Video Title',
       field: 'title',
+      cellRenderer: this.titleRenderer,
       width: 300
     }, {
       headerName: 'Description',
@@ -82,7 +83,11 @@ export class VideoGridComponent implements OnInit {
     return menuItems;
   }
 
-  public parseDate(params): string {
+  private titleRenderer(params): string {
+    return `<a href="https://www.youtube.com/watch?v=${params.data.videoId}" target="_blank">${params.data.title}</a>`;
+  }
+
+  private parseDate(params): string {
     return params.value.getDate() + '/' +
       (params.value.getMonth() + 1) + '/' +
       params.value.getFullYear();
